@@ -5,12 +5,19 @@ import { SearchTwoTone, ShoppingBasket } from '@material-ui/icons';
 import './Header.css';
 
 import { useStateValue } from './context/State';
+import auth from './firebase/firebase';
 
 const Header = () => {
   // let match = useRouteMatch();
 
   // const [state, dispatch] = useStateValue();
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+
+  const login = () => {
+    if (user) {
+      auth.signOut();
+    }
+  };
 
   return (
     <nav className='header'>
@@ -29,10 +36,12 @@ const Header = () => {
 
       <div className='header__nav'>
         {/* link is qual to a tag but href will refresh the page but ( to ) no */}
-        <Link to='/login' className='header__link'>
-          <div className='header__option'>
-            <span className='header__optionLineOne'>Hello Alex</span>
-            <span className='header__optionLineTwo'> Sign In</span>
+        <Link to={!user && '/login'} className='header__link'>
+          <div onClick={login} className='header__option'>
+            <span className='header__optionLineOne'>Hello {user?.email}</span>
+            <span className='header__optionLineTwo'>
+              {!user ? 'Sign In' : 'Sign Out'}
+            </span>
           </div>
         </Link>
 

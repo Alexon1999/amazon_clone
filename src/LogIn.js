@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './LogIn.css';
 
 import { Link, useHistory, useLocation, useRouteMatch } from 'react-router-dom';
@@ -7,15 +7,11 @@ import auth from './firebase/firebase';
 
 const LogIn = () => {
   const history = useHistory();
-  const location = useLocation();
-  const match = useRouteMatch();
+  // const location = useLocation();
+  // const match = useRouteMatch();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  // useEffect(() => {
-  //   const unSubscribe = auth.onAuthStateChanged()
-  // })
 
   const login = (e) => {
     e.preventDefault();
@@ -31,6 +27,7 @@ const LogIn = () => {
 
   const register = (e) => {
     e.preventDefault();
+
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
