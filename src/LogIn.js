@@ -7,8 +7,8 @@ import auth from './firebase/firebase';
 
 const LogIn = () => {
   const history = useHistory();
-  // const location = useLocation()
-  // const match = useRouteMatch()
+  const location = useLocation();
+  const match = useRouteMatch();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
