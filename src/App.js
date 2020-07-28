@@ -10,6 +10,7 @@ import LogIn from './LogIn';
 
 import { useStateValue } from './context/State';
 import auth from './firebase/firebase';
+import NotfoundPage from './NotfoundPage';
 
 function App() {
   // const [state, dispatch] = useStateValue();
@@ -52,6 +53,10 @@ function App() {
 
             <Route exact path='/login'>
               <LogIn />
+            </Route>
+
+            <Route exact>
+              <NotfoundPage />
             </Route>
           </Switch>
         </div>

@@ -15,6 +15,7 @@ const LogIn = () => {
 
   const login = (e) => {
     e.preventDefault();
+
     auth
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
@@ -33,6 +34,8 @@ const LogIn = () => {
       .then((auth) => {
         // created a user and logged in
         // redirect to home page
+        // auth.user.updateProfile({ displayName: 'Alexon' });
+
         history.push('/');
       })
       .catch((err) => alert(err.message));

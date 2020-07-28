@@ -35,7 +35,7 @@ const Header = () => {
       </div>
 
       <div className='header__nav'>
-        {/* link is qual to a tag but href will refresh the page but ( to ) no */}
+        {/* // ? link is qual to a tag but href will refresh the page but ( to ) no */}
         <Link to={!user && '/login'} className='header__link'>
           <div onClick={login} className='header__option'>
             <span className='header__optionLineOne'>Hello {user?.email}</span>

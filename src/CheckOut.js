@@ -33,6 +33,7 @@ const CheckOut = () => {
             {basket.map((item) => (
               <CheckoutProduct key={item.id} {...item} />
               // <CheckoutProduct
+              // key={item.id}
               //   id={item.id}
               //   price={item.price}
               //   rating={item.rating}
