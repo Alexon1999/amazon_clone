@@ -3,7 +3,7 @@ import './LogIn.css';
 
 import { Link, useHistory, useLocation, useRouteMatch } from 'react-router-dom';
 
-import auth from './firebase/firebase';
+import { auth } from './firebase/firebase';
 
 const LogIn = () => {
   const history = useHistory();

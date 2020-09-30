@@ -3,18 +3,99 @@
   margin: 0 auto;
 }
 
-.home__image {
-  width: 100%;
-  object-fit: contain;
-  /* to top left : en bas a droite vers top left  */
-  /* on va de haut vers bottom */
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  z-index: -1;
-  margin-bottom: -150px;
-}
-
 .home__row {
   display: flex;
   z-index: 1;
   margin: 0 5px;
+}
+
+#root
+  > div
+  > div
+  > div.carousel-root
+  > div.carousel.carousel-slider
+  > div
+  > ul
+  > li.slide.selected
+  > div
+  > img.home__image {
+  width: 100%;
+  object-fit: contain;
+  /* to top left : en bas a droite vers top left  */
+  /* on va de haut vers bottom */
+  /* mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  ) !important; */
+  /* z-index: -1; */
+  /* margin-bottom: -150px !important; */
+}
+
+.carousel-root {
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0)
+  ) !important;
+  z-index: -1;
+  margin-bottom: -230px !important;
+}
+
+#root > div > div > div.carousel-root > div.carousel.carousel-slider > ul {
+  bottom: 240px;
+}
+
+.thumbs-wrapper {
+  display: none;
+}
+
+#root
+  > div
+  > div
+  > div.carousel-root
+  > div.carousel.carousel-slider
+  > ul
+  > li.dot.selected {
+  width: 12px;
+  height: 12px;
+}
+
+#root
+  > div
+  > div
+  > div.carousel-root
+  > div.carousel.carousel-slider
+  > button.control-arrow {
+  opacity: 1;
+}
+
+@media (max-width: 1000px) {
+  .carousel-root {
+    margin-bottom: -150px !important;
+  }
+
+  #root > div > div > div.carousel-root > div.carousel.carousel-slider > ul {
+    bottom: 160px;
+  }
+}
+@media (max-width: 800px) {
+  .carousel-root {
+    margin-bottom: -80px !important;
+  }
+
+  #root > div > div > div.carousel-root > div.carousel.carousel-slider > ul {
+    bottom: 90px;
+  }
+}
+@media (max-width: 600px) {
+  .carousel-root {
+    margin-bottom: -50px !important;
+  }
+
+  #root > div > div > div.carousel-root > div.carousel.carousel-slider > ul {
+    bottom: 60px;
+  }
 }

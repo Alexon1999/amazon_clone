@@ -7,6 +7,7 @@ const StateProvider = ({ children }) => {
   const initialState = {
     basket: [],
     user: null,
+    alerts: [],
   };
   // const [state, dispatch] = useReducer(StateReducer, initialState);
 

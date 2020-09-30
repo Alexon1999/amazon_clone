@@ -2,14 +2,42 @@ import React from 'react';
 import './Home.css';
 import Product from './Product';
 
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+
 const Home = () => {
   return (
     <div className='home'>
-      <img
+      <Carousel>
+        <div>
+          <img
+            className='home__image'
+            src='https://images-eu.ssl-images-amazon.com/images/G/08/digital/video/gateway/placement/launch/TheBoysS2/THBY_2020_GWBleedingHero_FT_COVIDUPDATE_XSite_1500x600_PV_fr-FR._CB406827366_.jpg'
+            alt='home banner '
+          />
+          {/* <p className='legend'>Legend 1</p> */}
+        </div>
+        <div>
+          <img
+            className='home__image'
+            src='https://images-eu.ssl-images-amazon.com/images/G/08/AmazonMusic/2020/ACQ/Campaign/FR-FR_081720_Katana_ACQ_GW_Hero_D_1500x600_CV10._CB406756386_.jpg'
+            alt='home banner '
+          />
+        </div>
+        <div>
+          <img
+            className='home__image'
+            src='https://images-eu.ssl-images-amazon.com/images/G/08/kindle/journeys/OTJiNjVkMWQt/OTJiNjVkMWQt-ZjMyMWQ5MmEt-w1500._CB407810412_.jpg'
+            alt='home banner '
+          />
+        </div>
+      </Carousel>
+
+      {/* <img
         className='home__image'
         src='https://images-eu.ssl-images-amazon.com/images/G/08/digital/video/magellan/country/france/EvergreenRefresh/FromDec-19/FR_Evergreen_Refresh_FT_XSite_HeroTALL_1500x600._CB409104621_.jpg'
         alt='home banner '
-      />
+      /> */}
 
       <div className='home__row'>
         <Product
@@ -32,7 +60,7 @@ const Home = () => {
         <Product
           id='02151536165'
           title='Echo Dot (3ème génération), Enceinte connectée avec Alexa, Tissu anthracite'
-          price={(24, 99)}
+          price={24.99}
           rating={4}
           image='https://images-na.ssl-images-amazon.com/images/I/61u48FEs0rL._AC_SX425_.jpg'
         />

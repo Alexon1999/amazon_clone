@@ -1,0 +1,50 @@
+[debug] [2020-09-25T23:17:50.440Z] ----------------------------------------------------------------------
+[debug] [2020-09-25T23:17:50.446Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\alexo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-09-25T23:17:50.447Z] CLI Version:   8.10.0
+[debug] [2020-09-25T23:17:50.447Z] Platform:      win32
+[debug] [2020-09-25T23:17:50.447Z] Node Version:  v14.4.0
+[debug] [2020-09-25T23:17:50.450Z] Time:          Sat Sep 26 2020 01:17:50 GMT+0200 (heure d’été d’Europe centrale)
+[debug] [2020-09-25T23:17:50.451Z] ----------------------------------------------------------------------
+[debug] [2020-09-25T23:17:50.451Z] 
+[debug] [2020-09-25T23:17:50.468Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-09-25T23:17:50.469Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\alexo\Desktop\React\amazon_clone
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[debug] [2020-09-30T17:53:21.956Z] ----------------------------------------------------------------------
+[debug] [2020-09-30T17:53:21.964Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\alexo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-09-30T17:53:21.966Z] CLI Version:   8.10.0
+[debug] [2020-09-30T17:53:21.966Z] Platform:      win32
+[debug] [2020-09-30T17:53:21.966Z] Node Version:  v14.4.0
+[debug] [2020-09-30T17:53:21.970Z] Time:          Wed Sep 30 2020 19:53:21 GMT+0200 (heure d’été d’Europe centrale)
+[debug] [2020-09-30T17:53:21.971Z] ----------------------------------------------------------------------
+[debug] [2020-09-30T17:53:21.971Z] 
+[debug] [2020-09-30T17:53:22.005Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-09-30T17:53:22.006Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\alexo\Desktop\React\amazon_clone
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+

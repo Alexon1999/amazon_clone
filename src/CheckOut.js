@@ -6,9 +6,17 @@ import CheckoutProduct from './CheckoutProduct';
 import { ShoppingBasketSharp } from '@material-ui/icons';
 import SubTotal from './SubTotal';
 
+import FlipMove from 'react-flip-move';
+
 const CheckOut = () => {
   // const [state, dispatch] = useStateValue();
   const [{ basket }, dispatch] = useStateValue();
+
+  const removeAllBasket = () => {
+    dispatch({
+      type: 'REMOVE_ALL_BASKET',
+    });
+  };
 
   return (
     <div className='checkout'>
@@ -30,17 +38,20 @@ const CheckOut = () => {
         ) : (
           <div className='checkout__shoppingItems'>
             <h2 className='checkout__title'>Your Shopping Basket</h2>
-            {basket.map((item) => (
-              <CheckoutProduct key={item.id} {...item} />
-              // <CheckoutProduct
-              // key={item.id}
-              //   id={item.id}
-              //   price={item.price}
-              //   rating={item.rating}
-              //   title={item.title}
-              //   image={item.image}
-              // />
-            ))}
+            <button onClick={removeAllBasket}>Remove all</button>
+            <FlipMove>
+              {basket.map((item) => (
+                <CheckoutProduct key={item.id} {...item} />
+                // <CheckoutProduct
+                // key={item.id}
+                //   id={item.id}
+                //   price={item.price}
+                //   rating={item.rating}
+                //   title={item.title}
+                //   image={item.image}
+                // />
+              ))}
+            </FlipMove>
           </div>
         )}
       </div>

@@ -9,8 +9,17 @@ import CheckOut from './CheckOut';
 import LogIn from './LogIn';
 
 import { useStateValue } from './context/State';
-import auth from './firebase/firebase';
+import { auth } from './firebase/firebase';
 import NotfoundPage from './NotfoundPage';
+import Payment from './Payment';
+import Alerts from './Alerts';
+
+// + Stripe
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+import Orders from './Orders';
+
+const promise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISH_KEY);
 
 function App() {
   // const [state, dispatch] = useStateValue();
@@ -30,36 +39,47 @@ function App() {
 
     return () => {
       // clean up
-      unSubscribe();
+      unSubscribe && unSubscribe();
     };
   }, [dispatch]);
 
-  console.log(user);
+  // console.log(user);
 
   return (
     <>
       <Router>
-        <div className='app'>
-          <Switch>
-            <Route exact path='/'>
-              <Header />
-              <Home />
-            </Route>
+        <Alerts />
+        <Switch>
+          <Route exact path='/'>
+            <Header />
+            <Home />
+          </Route>
 
-            <Route exact path='/checkout'>
-              <Header />
-              <CheckOut />
-            </Route>
+          <Route exact path='/checkout'>
+            <Header />
+            <CheckOut />
+          </Route>
 
-            <Route exact path='/login'>
-              <LogIn />
-            </Route>
+          <Route exact path='/login'>
+            <LogIn />
+          </Route>
 
-            <Route exact>
-              <NotfoundPage />
-            </Route>
-          </Switch>
-        </div>
+          <Route exact path='/payment'>
+            <Header />
+            <Elements stripe={promise}>
+              <Payment />
+            </Elements>
+          </Route>
+
+          <Route path='/orders'>
+            <Header />
+            <Orders />
+          </Route>
+
+          <Route exact>
+            <NotfoundPage />
+          </Route>
+        </Switch>
       </Router>
     </>
   );

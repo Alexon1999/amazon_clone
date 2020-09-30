@@ -36,6 +36,23 @@ const reducer = (state, action) => {
     //     (product) => product.id !== action.payload
     //   ),
     // };
+    case 'REMOVE_ALL_BASKET':
+    case 'EMPTY_BASKET':
+      return {
+        ...state,
+        basket: [],
+      };
+
+    case 'ADD_TO_ALERT':
+      return {
+        ...state,
+        alerts: [action.payload, ...state.alerts],
+      };
+    case 'REMOVE_TO_ALERT':
+      return {
+        ...state,
+        alerts: state.alerts.filter((alert) => alert.id !== action.payload),
+      };
     default:
       return state;
   }
